@@ -21,12 +21,13 @@ var Symbols = confirm("Insert Symbols characters?");
 var numbers = confirm("Insert numbers?");
 
 // Input
-if((upperCase===false) && (lowerCase===false) && (Symbols===false) && (numbers===false)) {
-alert ("Choose a specification:");
+if((!upperCase) && (!lowerCase) && (!Symbols) && (!numbers)) {
+alert ("Please choose one!");
 var upperCase = confirm("Insert uppercase letters?");
 var lowerCase = confirm("Insert lowercase letters?");
-var Symbols = confirm("Insert Symbols characters?");
 var numbers = confirm("Insert numbers?");
+var Symbols = confirm("Insert Symbols characters?");
+
 }
 
 // password length 
@@ -46,7 +47,6 @@ var Number = ["0","1","2","3","4","5","6","7","8","9"];
 if (upperCase) {
   for(var i = 0; i < upperCase.length; i++ ){
     generate.push(upperCase[i]);
-
   }
 }
 if(lowerCase){
@@ -64,14 +64,13 @@ if(Number){
     generate.push(Number[i]);
   }
 }
-var finalResult = [];
+var finalPassword = [];
 for(i=0; i < PasswordLength; i++){
-  finalResult.push(generate[Math.floor(Math.random()*generate.length)]);
+  finalPassword.push(generate[Math.floor(Math.random() * generate.length)]);
 }
 
-return(finalResult.join(""));
+return(finalPassword.join(""));
 
 }
-
-// Add event listener to generate button
+// event listener for submit
 generateBtn.addEventListener("click", writePassword);
