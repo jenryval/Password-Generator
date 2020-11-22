@@ -17,21 +17,21 @@ var generate = [];
 // asking user password criteria
 var upperCase = confirm("Insert uppercase letters?");
 var lowerCase = confirm("Insert lowercase letters?");
-var Symbols = confirm("Insert special characters?");
+var Symbols = confirm("Insert Symbols characters?");
 var numbers = confirm("Insert numbers?");
 
 // Input
-while((upperCase===false) && (lowerCase===false) && (Symbols===false) && (numbers===false)) {
+if((upperCase===false) && (lowerCase===false) && (Symbols===false) && (numbers===false)) {
 alert ("Choose a specification:");
 var upperCase = confirm("Insert uppercase letters?");
 var lowerCase = confirm("Insert lowercase letters?");
-var Symbols = confirm("Insert special characters?");
+var Symbols = confirm("Insert Symbols characters?");
 var numbers = confirm("Insert numbers?");
 }
 
 // password length 
-var userLength = prompt ("choose chracters between 8 and 128.");
-while ((userLength < 8) || (userLength > 128)){
+var userLength = prompt ("choose characters between 8 and 128.");
+if((userLength < 8) || (userLength > 128)){
   alert("Please choose between parameters.");
   userLength = prompt("How long would you like your password?");
 } 
@@ -69,7 +69,6 @@ for(i=0; i < userLength; i++){
   finalResult.push(generate[Math.floor(Math.random()*generate.length)]);
 }
 
-// return finalResult
 return(finalResult.join(""));
 
 }
