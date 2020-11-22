@@ -30,10 +30,10 @@ var numbers = confirm("Insert numbers?");
 }
 
 // password length 
-var userLength = prompt ("choose characters between 8 and 128.");
-if((userLength < 8) || (userLength > 128)){
+var PasswordLength = prompt ("choose characters between 8 and 128.");
+if((PasswordLength < 8) || (PasswordLength > 128)){
   alert("Please choose between parameters.");
-  userLength = prompt("How long would you like your password?");
+  PasswordLength = prompt("How long would you like your password?");
 } 
 // Variables for characters
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -65,7 +65,7 @@ if(Number){
   }
 }
 var finalResult = [];
-for(i=0; i < userLength; i++){
+for(i=0; i < PasswordLength; i++){
   finalResult.push(generate[Math.floor(Math.random()*generate.length)]);
 }
 
