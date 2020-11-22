@@ -13,15 +13,40 @@ var SymbolsCaseCharCodes = CharacterValue(35, 47).concat(
 
 button.addEventListener("click", e => {
   e.preventDefault()
-  var generateUpper = Prompt("do you want to include Upper Case Letters?");
-  var generateLower = Prompt("do you want to include Lower Case Letters?");
-  var generateSymbols = Prompt("do you want to include Symblos?");
-  var generateNumber = Prompt("do you want to include Numbers?");
-  var password = generatePassword(generateLower, generateUpper, generateNumber, generateSymbols);
-})
 
-function generatePassword(generateLower, generateUpper, generateNumber, generateSymbols) {
-  console.log(UpperCaseCharCodes)
+  if (userInput < 8) {
+    alert('Password must be more than 8 characters');
+    }
+
+    if (userInput >= 128) {
+    alert('Password must be less than 128 characters');
+    }
+
+  var lenght = parseInt(prompt(("how many characters would you like")))
+
+  if (lenght < 8){
+    alert("cannot be less than 8 characters!");
+    return;
+  }
+  if (lenght > 128){
+    alert("cannot exceed more than 128 Characters!");
+    return;
+  }
+ 
+    
+  });
+  var generateUpper = confirm("do you want to include Upper Case Letters?");
+  var generateLower = confirm("do you want to include Lower Case Letters?");
+  var generateSymbols = confirm("do you want to include Symblos?");
+  var generateNumber = confirm("do you want to include Numbers?");
+  var password = generatePassword(generateLower, generateUpper, generateNumber, generateSymbols);
+
+  if (!generateLower && !generateUpper && !generateNumber && !generateSymbols) {
+    alert("Please choose an option!");
+}
+
+function generatePassword() {
+  
 }
 
 function CharacterValue(low, high) { 
