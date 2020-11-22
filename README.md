@@ -13,4 +13,4 @@ you can pick between all 4 criterias or if you want to keep it simple only have 
 
 
 
-![image](https://user-images.githubusercontent.com/71196559/99893091-a6ed5480-2c41-11eb-8e53-e32cf74900b3.png)
+![image](https://user-images.githubusercontent.com/71196559/99893134-f6cc1b80-2c41-11eb-9dc8-3e6ec2e9a2eb.png)
